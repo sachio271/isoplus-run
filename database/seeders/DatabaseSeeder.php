@@ -21,5 +21,12 @@ class DatabaseSeeder extends Seeder
             'level' => 'admin',
             'password' => 'admin'
         ]);
+
+        User::factory()->create([
+            'name' => 'user',
+            'email' => 'user@example.com',
+            'level' => 'user',
+            'password' => 'user'
+        ]);
     }
 }

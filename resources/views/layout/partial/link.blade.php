@@ -12,3 +12,11 @@
 <!-- Nepcha Analytics (nepcha.com) -->
 <!-- Nepcha is a easy-to-use web analytics. No cookies and fully compliant with GDPR, CCPA and PECR. -->
 <script defer data-site="YOUR_DOMAIN_HERE" src="https://api.nepcha.com/js/nepcha-analytics.js"></script>
+
+<link
+  rel="shortcut icon"
+  href="./assets/images/favicon.svg"
+  type="image/x-icon"
+/>
+<link rel="stylesheet" href="./assets/css/tailwind.css" />
+<script defer src="./assets/js/alpine.min.js"></script>

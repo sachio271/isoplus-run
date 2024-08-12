@@ -12,17 +12,22 @@ Route::controller(AuthController::class)->group(function () {
     Route::post('login', 'loginAction')->name('login.action');
 
     Route::get('logout', 'logout')->middleware('auth')->name('logout');
+})->middleware('role.redirect');
+
+Route::middleware(['auth', 'role:admin'])->group(function () {
+    Route::get('dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
 });
 
+
 Route::middleware('auth')->group(function () {
-    Route::get('dashboard', function () {
+    Route::get('/home', function () {
         return view('home');
-    })->name('dashboard');
-    Route::get('/welcome', function () {
-        return view('welcome');
-    });
-    Route::get('/dashboard', function () {
-        return view('dashboard');
     })->name('home');
-    Route::get('/profile', [App\Http\Controllers\AuthController::class, 'profile'])->name('profile');
 });
+
+// Handle unauthorized access
+Route::get('unauthorized', function () {
+    abort(401);
+})->name('unauthorized');

@@ -30,7 +30,7 @@
 
 
       @yield('content')
-      @include('layout.partial.footer')
+      {{-- @include('layout.partial.footer') --}}
 
   </body>
   @include('layout.partial.script')
