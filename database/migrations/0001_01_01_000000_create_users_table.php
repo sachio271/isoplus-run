@@ -13,12 +13,42 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('email')->unique();
             $table->string('level');
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->rememberToken();
+            $table->string('ektp');
+            $table->string('type');
+            $table->string('birthPlace')->nullable();
+            $table->string('birthDate')->nullable();
+            $table->string('ktpAddress')->nullable();
+            $table->string('ktpSubDistrict')->nullable();
+            $table->string('ktpDistrict')->nullable();
+            $table->string('ktpCity')->nullable();
+            $table->string('address')->nullable();
+            $table->string('subDistrict')->nullable();
+            $table->string('district')->nullable();
+            $table->string('city')->nullable();
+            $table->string('phoneNo')->nullable();
+            $table->string('email')->nullable();
+            $table->string('gender')->nullable();
+            $table->string('weight')->nullable();
+            $table->string('height')->nullable();
+            $table->string('bloodType')->nullable();
+            $table->string('religion')->nullable();
+            $table->string('createdBy')->nullable();
+            $table->string('createdDate')->nullable();
+            $table->string('changeBy')->nullable();
+            $table->string('changeDate')->nullable();
+            $table->string('ektp2')->nullable();
+            $table->string('startDate')->nullable();
+            $table->string('endDate')->nullable();
+            $table->string('struct')->nullable();
+            $table->string('status')->nullable();
+            $table->string('reason')->nullable();
+            $table->string('documentNo')->nullable();
+            $table->string('information')->nullable();
+            $table->string('createdBy2')->nullable();
+            $table->string('createdDate2')->nullable();
+            $table->string('changeBy2')->nullable();
+            $table->string('changeDate2')->nullable();
             $table->timestamps();
         });
 

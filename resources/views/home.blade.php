@@ -104,7 +104,7 @@
             <div class="lg:ml-auto lg:text-right">
               <div class="relative z-10 inline-block pt-11 lg:pt-0">
                 <img
-                  src="../images/hero/hero-image-01.png"
+                  src="../assets/main.jpeg"
                   alt="hero"
                   class="max-w-full lg:ml-auto"
                 />
