@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('level');
             $table->string('ektp');
             $table->string('type');
+            $table->string('name');
             $table->string('birthPlace')->nullable();
             $table->string('birthDate')->nullable();
             $table->string('ktpAddress')->nullable();

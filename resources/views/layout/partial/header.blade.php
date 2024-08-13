@@ -12,7 +12,7 @@
     <div class="items-center block w-auto max-h-screen overflow-auto h-sidenav grow basis-full">
       <ul class="flex flex-col pl-0 mb-0">
         <li class="mt-0.5 w-full">
-          <a class="py-2.7 shadow-soft-xl text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap rounded-lg bg-white px-4 font-semibold text-slate-700 transition-colors" href="{{route('home')}}">
+          <a class="py-2.7 shadow-soft-xl text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap rounded-lg bg-white px-4 font-semibold text-slate-700 transition-colors" href="{{ auth()->user()->level === 'admin' ? route('dashboard') : route('home') }}">
             <div class="bg-gradient-to-tl from-purple-700 to-blue-500 shadow-soft-2xl mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-white bg-center stroke-0 text-center xl:p-2.5">
               <svg width="12px" height="12px" viewBox="0 0 45 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <title>shop</title>
@@ -34,7 +34,7 @@
                 </g>
               </svg>
             </div>
-            <span class="ml-1 duration-300 opacity-100 pointer-events-none ease-soft">Dashboard</span>
+            <span class="ml-1 duration-300 opacity-100 pointer-events-none ease-soft">{{ auth()->user()->level === 'admin' ? 'Dashboard' : 'Home' }}</span>
           </a>
         </li>
         <li class="w-full mt-4">
@@ -85,8 +85,6 @@
           </li>
       </ul>
     </div>
-
-
   </aside>
 
   <!-- end sidenav -->
